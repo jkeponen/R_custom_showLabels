@@ -155,8 +155,11 @@ myshowLabels1 <- function(x, y, labels=NULL, id.method="identify",
 }
 ##################
 
-
+# Replace car::showLabels with myshowLabels
 assignInNamespace(x = "showLabels", value = myshowLabels, ns = "car")
+
+# Undo it
+assignInNamespace(x = "showLabels", value = showLabels, ns = "car")
 
 scatterplotMatrix(BigMac2003[c('BigMac','Rice','Bread')],
                   smooth = list(col.smooth = 'red', col.spread = 'green' ),
