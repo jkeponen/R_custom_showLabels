@@ -160,7 +160,7 @@ assignInNamespace(x = "showLabels", value = myshowLabels, ns = "car")
 
 scatterplotMatrix(BigMac2003[c('BigMac','Rice','Bread')],
                   smooth = list(col.smooth = 'red', col.spread = 'green' ),
-                  id = list(n=4),
+                  id = list(n=69),
                   # id = list(labels = c("Karachi", "Nairobi"),
                   var.labels = c('Big Mac -indeksi', 'Riisi-indeksi', 'Leipäindeksi'),
 )
