@@ -161,9 +161,11 @@ assignInNamespace(x = "showLabels", value = myshowLabels, ns = "car")
 # Undo it
 assignInNamespace(x = "showLabels", value = showLabels, ns = "car")
 
+# Testing, should only print Karachi and Nairobi (now only hard code).
+# Parmeter n in id = list(n=nrow(df)) must be equal to nrow(df) to ensure
+# every row's distance is calculated and then available for printing.
 scatterplotMatrix(BigMac2003[c('BigMac','Rice','Bread')],
                   smooth = list(col.smooth = 'red', col.spread = 'green' ),
-                  id = list(n=69),
-                  # id = list(labels = c("Karachi", "Nairobi"),
+                  id = list(n=nrow(BigMac2003)),
                   var.labels = c('Big Mac -indeksi', 'Riisi-indeksi', 'Leipäindeksi'),
 )
